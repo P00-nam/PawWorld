@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:paw_world/login_signup/login.dart';
-import 'package:paw_world/login_signup/user_model.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({

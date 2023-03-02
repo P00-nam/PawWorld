@@ -12,7 +12,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 192, 214, 225),
       body: CustomScrollView(
         slivers: [
           const SliverToBoxAdapter(
@@ -30,7 +29,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             centerTitle: true,
             floating: true,
-            backgroundColor: Colors.transparent,
           ),
           const SliverToBoxAdapter(
             child: SizedBox(
@@ -97,12 +95,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          print("Item tapped");
+                          debugPrint("Item tapped");
                         },
                         child: Container(
                           margin: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            //color: Colors.brown.shade50,
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Image.asset(categories[index]['iconPath']),

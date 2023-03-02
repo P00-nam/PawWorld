@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_settings_screens/flutter_settings_screens.dart';
-import 'package:paw_world/menu/appearance.dart';
-import 'package:paw_world/menu/log_out.dart';
-import 'package:paw_world/menu/privacy.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});
@@ -18,11 +14,13 @@ class _MenuScreenState extends State<MenuScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(
-          Icons.arrow_back_ios,
-          size: 20,
+        leading: IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.arrow_back_ios,
+            size: 20,
+          ),
         ),
-        //backgroundColor: Colors.black,
         title: const Text('Menu'),
         centerTitle: true,
       ),
@@ -42,7 +40,7 @@ class _MenuScreenState extends State<MenuScreen> {
               ),
             ),
             const Text(
-              "data",
+              "abc",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -69,35 +67,35 @@ class _MenuScreenState extends State<MenuScreen> {
                 ),
               ),
             ),
-            SettingsGroup(
-              title: 'Appearance',
-              children: const <Widget>[
-                Appearance(),
-              ],
-            ),
-            SettingsGroup(
-              title: 'Adoptions',
-              children: const <Widget>[],
-            ),
-            SettingsGroup(
-              title: 'Favorites',
-              children: const <Widget>[],
-            ),
-            SettingsGroup(
-              title: 'Privacy',
-              children: const <Widget>[
-                Privacy(),
-              ],
-            ),
-            SettingsGroup(
-              title: 'Log Out',
-              children: <Widget>[
-                TextButton(
-                  onPressed: isLoggedIn ? null : () => const LogOutUser(),
-                  child: const Text("Logout"),
-                )
-              ],
-            ),
+            // SettingsGroup(
+            //   title: 'Appearance',
+            //   children: const <Widget>[
+            //     Appearance(),
+            //   ],
+            // ),
+            // SettingsGroup(
+            //   title: 'Adoptions',
+            //   children: const <Widget>[],
+            // ),
+            // SettingsGroup(
+            //   title: 'Favorites',
+            //   children: const <Widget>[],
+            // ),
+            // SettingsGroup(
+            //   title: 'Privacy',
+            //   children: const <Widget>[
+            //     Privacy(),
+            //   ],
+            // ),
+            // SettingsGroup(
+            //   title: 'Log Out',
+            //   children: <Widget>[
+            //     TextButton(
+            //       onPressed: isLoggedIn ? null : () => const LogOutUser(),
+            //       child: const Text("Logout"),
+            //     )
+            //   ],
+            // ),
           ],
         ),
       ),

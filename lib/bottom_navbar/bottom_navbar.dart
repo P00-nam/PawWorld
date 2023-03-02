@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:paw_world/favorites/favorites.dart';
 import 'package:paw_world/home_screen/home_screen.dart';
+import 'package:paw_world/menu/menu.dart';
+import 'package:paw_world/notification/notification.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -13,15 +16,9 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
-    const Text(
-      'Favorites',
-    ),
-    const Text(
-      'Notifications',
-    ),
-    const Text(
-      'Menu',
-    ),
+    const FavoriteScreen(),
+    const NotificationScreen(),
+    const MenuScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -32,15 +29,14 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print("object");
+    debugPrint("object");
     return Scaffold(
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.black,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            backgroundColor: Colors.black,
+            backgroundColor: Colors.brown,
             label: 'Home',
           ),
           BottomNavigationBarItem(
