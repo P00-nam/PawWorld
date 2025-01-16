@@ -32,14 +32,21 @@ dependencies:
   flutter:
     sdk: flutter
   form_field_validator: ^1.0.1
+  onesignal_flutter: ^3.5.1
+  image_picker: ^0.8.7
+  shared_preferences: ^2.1.0
+  open_street_map_search_and_pick: ^0.0.16
+  mockito: ^5.4.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   http: ^0.13.5
-  settings_screen: ^0.0.5
-  flutter_settings_screens: ^0.2.2+1
+  # settings_screen: ^0.0.5
+  # flutter_settings_screens: ^0.2.2+1
   flutter_svg: ^2.0.2
+  provider: ^6.0.5
+  url_launcher: ^6.1.10
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +71,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - asset/gymimage.png
     - asset/petimage.png
     - asset/background.png
     - asset/cat.png
@@ -71,7 +79,7 @@ flutter:
     - asset/rabbit.png
     - asset/bird.png
     - asset/horses.png
-    - asset/other.png
+    - asset/all_pet.png
     - asset/dog_image.png
     - asset/light_theme.svg
 
